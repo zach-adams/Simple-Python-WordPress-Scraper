@@ -34,7 +34,7 @@ rows = html.select('#hnmain > tr:nth-of-type(3) > td > table > tr');
 for row in rows:
     if row.select('.title'):
         link = row.select('td:nth-of-type(3) a')
-        print link[0].texts
+        print link[0].text
         post = WordPressPost()
         post.title = link[0].text
         post.post_type = "post"
